@@ -259,7 +259,7 @@ body.lead-submitted #thanks{ display:flex; }
 
 /* ---------- Before & After ---------- */
 .ba-gallery{ column-count:2; column-gap:1.2rem; margin-top:2rem; }
-.ba-item{ position:relative; margin:0 0 1.2rem; padding:8px; border-radius:var(--r); overflow:hidden; break-inside:avoid; -webkit-column-break-inside:avoid; display:inline-block; width:100%; }
+.ba-item{ position:relative; margin:0 0 1.2rem; padding:8px; border-radius:var(--r); overflow:hidden; break-inside:avoid; -webkit-column-break-inside:avoid; display:block; }
 .ba-item img{ display:block; width:100%; height:auto; border-radius:var(--r-s); }
 .ba-tag{ position:absolute; top:18px; font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
   padding:.3em .7em; border-radius:999px; background:rgba(8,13,22,.62); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
@@ -1102,15 +1102,16 @@ deck.addEventListener("scroll", ()=>{
 const io = new IntersectionObserver(entries=>{
   entries.forEach(en=>{
     if(en.isIntersecting){
-      // reveal children
+      // reveal children as soon as the panel enters view (works for tall panels too)
       en.target.querySelectorAll(".reveal").forEach(r=>r.classList.add("in"));
-      if(!isMobile()){
+      // highlight the side-nav / dock once the panel is meaningfully in view
+      if(!isMobile() && en.intersectionRatio >= 0.3){
         const idx = chapters.findIndex(c=>c.id===en.target.id);
         if(idx>-1) setActive(idx);
       }
     }
   });
-}, { threshold: 0.35 });
+}, { threshold: [0, 0.3] });
 panels.forEach(p=>io.observe(p));
 
 /* initial reveal for hero + recalc on layout change */

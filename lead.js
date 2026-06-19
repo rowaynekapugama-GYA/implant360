@@ -21,11 +21,11 @@
 
 import nodemailer from "nodemailer";
 
-// Your unique SmileOx CRM intake address.
-// >>> REPLACE the placeholder with the real intake email SmileOx gives you,
-//     or set an INTAKE_ADDRESS environment variable in Vercel. <<<
+// Your unique SmileOx CRM intake address (from SmileOx → "Integrate Website
+// Form Intake"). Can be overridden with an INTAKE_ADDRESS env var if it changes.
 const INTAKE_ADDRESS =
-  process.env.INTAKE_ADDRESS || "REPLACE_WITH_YOUR_SMILEOX_INTAKE_EMAIL";
+  process.env.INTAKE_ADDRESS ||
+  "implant360-landing-page+fde0799b-8214-4d45-84a1-095135a68e6c@intake.smileox.com.au";
 
 export default async function handler(req, res) {
   // --- CORS ---
