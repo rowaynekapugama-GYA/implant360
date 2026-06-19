@@ -77,6 +77,17 @@ export default async function handler(req, res) {
       "Replacing: " + (toothSituation || "—"),
     ].join("\n");
 
+    // Surface misconfiguration clearly instead of a generic failure.
+    const missing = ["SMTP_HOST", "SMTP_USER", "SMTP_PASS", "SMTP_FROM"].filter(
+      (k) => !process.env[k]
+    );
+    if (missing.length) {
+      console.error("Missing SMTP env vars:", missing.join(", "));
+      return res
+        .status(500)
+        .json({ ok: false, error: "Server email is not configured", missing });
+    }
+
     const port = Number(process.env.SMTP_PORT) || 587;
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -99,6 +110,10 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error("Lead relay failed:", err);
-    return res.status(500).json({ ok: false, error: "Failed to send" });
+    return res.status(500).json({
+      ok: false,
+      error: "Failed to send",
+      detail: String(err && err.message ? err.message : err),
+    });
   }
 }
