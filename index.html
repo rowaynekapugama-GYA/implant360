@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, follow">
+<title>Dental Implants in Western Sydney — Payment Plans & Early Super Release | Implant 360</title>
+<meta name="description" content="Dental implants in Western Sydney with Dr Ramesh Harichandran. Flexible payment plans and early release of super available for eligible patients. Book your free, no-obligation consultation at Implant 360.">
+<link rel="icon" href="logo.webp">
+
+<!-- Fonts: Fraunces (display serif) + Plus Jakarta Sans (UI / body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================================
+   IMPLANT 360 — Liquid Glass Landing Page
+   Single file. Desktop = vertical scroll. Mobile = horizontal swipe deck.
+   ========================================================================= */
+
+:root{
+  /* Brand palette (Implant 360 — teal / sage on dark charcoal) */
+  --ink:        #08110f;   /* near-black teal-charcoal */
+  --navy-900:   #0a1614;   /* deep base */
+  --navy-800:   #0f201c;
+  --steel:      #3c8079;   /* PRIMARY brand teal (the buttons) */
+  --steel-deep: #2b5f58;
+  --steel-lite: #5aa49b;
+  --aqua:       #7ccabe;   /* accent / checkmarks / glass edge glow */
+  --mist:       #aec3bd;   /* muted teal-grey text */
+  --mist-dim:   #7d958e;
+  --cloud:      #f1f8f5;   /* near white */
+  --cream:      #fbfdfb;   /* warm white (form surface) */
+
+  /* Glass */
+  --glass:        rgba(255,255,255,.07);
+  --glass-2:      rgba(255,255,255,.045);
+  --glass-edge:   rgba(255,255,255,.18);
+  --glass-edge-2: rgba(255,255,255,.30);
+  --glass-blur:   blur(22px) saturate(135%);
+  --r:   24px;    /* radius */
+  --r-s: 16px;
+  --r-l: 32px;
+
+  /* Layout */
+  --bar-h: 68px;
+  --dock-h: 84px;
+  --maxw: 1200px;
+
+  --shadow-soft: 0 18px 50px -20px rgba(0,0,0,.55);
+  --shadow-card: 0 22px 60px -24px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.22);
+
+  --ease: cubic-bezier(.16,.84,.34,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family:"Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color:var(--cloud);
+  background:var(--navy-900);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+button{ font-family:inherit; cursor:pointer; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--aqua); outline-offset:3px; border-radius:6px; }
+
+/* ---------- Ambient liquid-glass background ---------- */
+.bg{ position:fixed; inset:0; z-index:-2; overflow:hidden;
+  background:
+    radial-gradient(120% 100% at 80% -10%, #16314f 0%, transparent 55%),
+    radial-gradient(120% 120% at -10% 110%, #15273f 0%, transparent 50%),
+    linear-gradient(160deg, var(--ink) 0%, var(--navy-900) 45%, var(--navy-800) 100%);
+}
+.orb{ position:absolute; border-radius:50%; filter:blur(70px); opacity:.55; will-change:transform; }
+.orb.a{ width:46vmax; height:46vmax; top:-14vmax; right:-10vmax;
+  background:radial-gradient(circle at 30% 30%, var(--steel-lite), transparent 65%); animation:drift1 26s var(--ease) infinite alternate; }
+.orb.b{ width:40vmax; height:40vmax; bottom:-14vmax; left:-12vmax;
+  background:radial-gradient(circle at 60% 40%, var(--aqua), transparent 62%); opacity:.4; animation:drift2 32s var(--ease) infinite alternate; }
+.orb.c{ width:30vmax; height:30vmax; top:35%; left:48%;
+  background:radial-gradient(circle at 50% 50%, var(--steel), transparent 60%); opacity:.32; animation:drift3 38s var(--ease) infinite alternate; }
+@keyframes drift1{ to{ transform:translate3d(-6vmax,5vmax,0) scale(1.1);} }
+@keyframes drift2{ to{ transform:translate3d(7vmax,-4vmax,0) scale(1.12);} }
+@keyframes drift3{ to{ transform:translate3d(-5vmax,-6vmax,0) scale(.92);} }
+/* grain */
+.bg::after{ content:""; position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+/* ---------- Hero background video ---------- */
+#hero{ position:relative; isolation:isolate; }
+.hero-video-wrap{ position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; background:var(--navy-900); }
+.hero-video{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero-veil{ position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    linear-gradient(100deg, rgba(8,13,22,.92) 0%, rgba(8,13,22,.72) 34%, rgba(8,13,22,.34) 62%, rgba(8,13,22,.5) 100%),
+    linear-gradient(180deg, rgba(8,13,22,.45) 0%, transparent 22%, transparent 70%, rgba(8,13,22,.55) 100%); }
+#hero .panel-inner{ position:relative; z-index:2; }
+@media (max-width:880px){
+  .hero-veil{ background:linear-gradient(180deg, rgba(8,13,22,.74) 0%, rgba(8,13,22,.62) 45%, rgba(8,13,22,.9) 100%); }
+}
+
+/* ---------- Glass utility ---------- */
+.glass{
+  position:relative;
+  background:linear-gradient(155deg, var(--glass) 0%, var(--glass-2) 100%);
+  -webkit-backdrop-filter:var(--glass-blur);
+  backdrop-filter:var(--glass-blur);
+  border:1px solid var(--glass-edge);
+  border-radius:var(--r);
+  box-shadow:var(--shadow-card);
+}
+.glass::before{ /* specular sheen on top edge */
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:linear-gradient(180deg, rgba(255,255,255,.16), transparent 26%);
+  -webkit-mask:linear-gradient(#fff 0 0); mask:linear-gradient(#fff 0 0);
+}
+
+/* ---------- Buttons ---------- */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.55em;
+  font-weight:600; font-size:.98rem; letter-spacing:.01em; line-height:1;
+  padding:.95em 1.5em; border-radius:999px; border:1px solid transparent;
+  text-decoration:none; transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s; white-space:nowrap; }
+.btn svg{ width:1.05em; height:1.05em; }
+.btn-primary{ color:#fff;
+  background:linear-gradient(180deg, var(--steel-lite), var(--steel-deep));
+  box-shadow:0 12px 28px -10px rgba(60,128,121,.85), inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.2);
+  border-color:rgba(255,255,255,.18); }
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 18px 36px -12px rgba(80,137,184,.95), inset 0 1px 0 rgba(255,255,255,.4); }
+.btn-ghost{ color:var(--cloud); background:var(--glass); -webkit-backdrop-filter:var(--glass-blur); backdrop-filter:var(--glass-blur); border:1px solid var(--glass-edge); }
+.btn-ghost:hover{ transform:translateY(-2px); border-color:var(--glass-edge-2); background:rgba(255,255,255,.12); }
+.btn-block{ width:100%; }
+.btn-lg{ padding:1.1em 1.8em; font-size:1.05rem; }
+
+/* ---------- Persistent top bar ---------- */
+.topbar{ position:fixed; top:0; left:0; right:0; height:var(--bar-h); z-index:60;
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:0 clamp(16px,4vw,40px);
+  background:linear-gradient(180deg, rgba(8,13,22,.72), rgba(8,13,22,.32));
+  -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%);
+  border-bottom:1px solid rgba(255,255,255,.08); }
+.brand{ display:flex; flex-direction:column; line-height:1.1; text-decoration:none; }
+.brand b{ font-family:"Fraunces", serif; font-weight:600; font-size:1.08rem; letter-spacing:.01em; color:#fff; }
+.brand span{ font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:var(--mist-dim); margin-top:3px; }
+.topbar .btn{ padding:.72em 1.25em; font-size:.9rem; }
+
+/* ---------- Deck / panels ---------- */
+.deck{ position:relative; }
+.panel{ position:relative; padding:calc(var(--bar-h) + clamp(28px,6vh,72px)) clamp(20px,5vw,48px) clamp(48px,8vh,90px);
+  min-height:100svh; display:flex; align-items:center; }
+.panel-inner{ width:100%; max-width:var(--maxw); margin:0 auto; }
+
+/* ---------- Section header ---------- */
+.eyebrow{ display:inline-flex; align-items:center; gap:.6em; font-size:.7rem; font-weight:600;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--aqua); margin:0 0 1rem; }
+.eyebrow::before{ content:""; width:26px; height:1px; background:linear-gradient(90deg,var(--aqua),transparent); }
+h1,h2,h3{ font-family:"Fraunces", serif; font-weight:500; line-height:1.04; margin:0; letter-spacing:-.01em; }
+h2.title{ font-size:clamp(2rem,5vw,3.4rem); color:#fff; max-width:16ch; }
+.lede{ color:var(--mist); font-size:clamp(1rem,1.6vw,1.18rem); max-width:54ch; margin:1.1rem 0 0; }
+.title em{ font-style:italic; color:var(--aqua); }
+
+/* ---------- HERO ---------- */
+#hero .panel-inner{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,4vw,64px); align-items:center; }
+.hero-copy h1{ font-size:clamp(2.7rem,6.2vw,5.1rem); color:#fff; margin:.4rem 0 0; }
+.hero-copy h1 .pop{ display:block; position:relative; }
+.hero-copy h1 .pop em{ font-style:italic; color:var(--aqua); }
+.hero-sub{ color:var(--mist); font-size:clamp(1.02rem,1.6vw,1.2rem); max-width:46ch; margin:1.3rem 0 0; }
+.hero-sub b{ color:var(--cloud); font-weight:600; }
+
+.pay-chip{ display:flex; gap:.95rem; align-items:flex-start; padding:1rem 1.2rem; margin:1.6rem 0 0; border-radius:var(--r-s); }
+.pay-chip .ico{ flex:0 0 auto; width:42px; height:42px; border-radius:12px; display:grid; place-items:center;
+  background:linear-gradient(180deg,var(--steel-lite),var(--steel-deep)); box-shadow:inset 0 1px 0 rgba(255,255,255,.4); color:#fff; }
+.pay-chip .ico svg{ width:20px; height:20px; }
+.pay-chip b{ display:block; color:#fff; font-weight:600; font-size:1rem; }
+.pay-chip p{ margin:.2rem 0 0; color:var(--mist); font-size:.9rem; line-height:1.45; }
+
+.trust{ display:flex; flex-wrap:wrap; gap:.6rem 1.4rem; margin:1.7rem 0 0; padding:0; list-style:none; }
+.trust li{ display:flex; align-items:center; gap:.5rem; font-size:.92rem; color:var(--cloud); font-weight:500; }
+.check{ flex:0 0 auto; width:20px; height:20px; border-radius:50%; display:grid; place-items:center;
+  background:rgba(124,202,190,.16); border:1px solid rgba(124,202,190,.5); color:var(--aqua); }
+.check svg{ width:11px; height:11px; }
+
+.hero-cta{ display:flex; flex-wrap:wrap; gap:.8rem; margin:2rem 0 0; }
+
+.scroll-hint{ display:inline-flex; align-items:center; gap:.5rem; margin-top:1.8rem; color:var(--mist-dim); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; }
+.scroll-hint .dot{ width:7px; height:7px; border-radius:50%; background:var(--aqua); animation:pulse 1.8s ease infinite; }
+.hint-desktop{ display:inline; } .hint-mobile{ display:none; }
+@keyframes pulse{ 0%,100%{ opacity:.4; transform:scale(.8);} 50%{ opacity:1; transform:scale(1.3);} }
+
+/* ---------- Lead form (liquid glass) ---------- */
+.form-card{ overflow:hidden; }
+.form-head{ padding:1.5rem 1.6rem 1.3rem; background:linear-gradient(160deg, var(--ink), #0d1a2b);
+  border-bottom:1px solid rgba(255,255,255,.07); }
+.form-title{ font-size:1.45rem; color:#fff; }
+.form-sub{ margin:.4rem 0 0; color:var(--mist); font-size:.9rem; }
+.form-body{ padding:1.4rem 1.6rem 1.6rem; }
+fieldset.q{ border:0; margin:0 0 1.15rem; padding:0; }
+fieldset.q legend{ font-size:.86rem; font-weight:600; color:var(--cloud); margin-bottom:.6rem; padding:0; }
+.req{ color:var(--aqua); }
+.opts{ display:flex; flex-wrap:wrap; gap:.5rem; }
+.opt{ flex:1 1 auto; text-align:left; padding:.7em .9em; border-radius:12px; font-size:.86rem; color:var(--mist);
+  background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12); transition:.18s var(--ease); position:relative; }
+.opt:hover{ border-color:rgba(255,255,255,.3); color:var(--cloud); }
+.opt.is-selected{ color:#fff; border-color:var(--aqua); background:rgba(124,202,190,.16);
+  box-shadow:0 0 0 3px rgba(124,202,190,.14), inset 0 1px 0 rgba(255,255,255,.2); }
+.opt.is-selected::after{ content:"✓"; margin-left:.45em; color:var(--aqua); font-weight:700; }
+.field{ display:block; margin:0 0 1rem; }
+.field-label{ display:block; font-size:.86rem; font-weight:600; color:var(--cloud); margin-bottom:.45rem; }
+.field input{ width:100%; padding:.85em 1em; border-radius:12px; font-size:1rem; color:#fff;
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.16); transition:.18s; }
+.field input::placeholder{ color:var(--mist-dim); }
+.field input:focus{ outline:none; border-color:var(--aqua); background:rgba(255,255,255,.08); box-shadow:0 0 0 3px rgba(124,202,190,.16); }
+.field.err input{ border-color:#e0857d; box-shadow:0 0 0 3px rgba(224,133,125,.18); }
+.err-msg{ display:none; color:#f0a7a0; font-size:.78rem; margin-top:.35rem; }
+.q.err .err-msg, .field.err .err-msg{ display:block; }
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+.submit-btn{ margin-top:.4rem; }
+.form-foot{ margin:.9rem 0 0; font-size:.76rem; color:var(--mist-dim); text-align:center; line-height:1.5; }
+.form-success{ padding:2.4rem 1.7rem; text-align:center; }
+.form-success .sx{ width:62px; height:62px; margin:0 auto 1rem; border-radius:50%; display:grid; place-items:center;
+  background:rgba(124,202,190,.16); border:1px solid rgba(124,202,190,.5); color:var(--aqua); }
+.form-success .sx svg{ width:28px; height:28px; }
+.form-success h3{ font-size:1.5rem; color:#fff; }
+.form-success p{ color:var(--mist); margin:.6rem 0 0; font-size:.95rem; }
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:.7rem; }
+@media (max-width:400px){ .field-row{ grid-template-columns:1fr; gap:0; } }
+
+/* ---------- Thank-you panel (revealed only after the form is submitted) ---------- */
+#thanks{ display:none; }
+body.lead-submitted #thanks{ display:flex; }
+.thanks-card{ max-width:640px; margin:0 auto; text-align:center; padding:clamp(2rem,5vw,3.2rem); }
+.thanks-badge{ width:78px; height:78px; margin:0 auto 1.5rem; border-radius:50%; display:grid; place-items:center;
+  background:radial-gradient(circle at 30% 25%, var(--steel-lite), var(--steel-deep)); color:#fff;
+  box-shadow:0 16px 44px rgba(60,128,121,.5), inset 0 1px 0 rgba(255,255,255,.45); }
+.thanks-badge svg{ width:36px; height:36px; }
+.thanks-card h2{ font-size:clamp(1.9rem,5vw,3rem); color:#fff; }
+.thanks-card .lede{ margin:1rem auto 0; }
+.next-steps{ list-style:none; margin:1.9rem auto 0; padding:0; max-width:460px; text-align:left; display:grid; gap:.8rem; }
+.next-steps li{ display:flex; gap:.75rem; align-items:flex-start; color:var(--mist); font-size:.94rem; line-height:1.5; }
+.next-steps .num{ flex:0 0 auto; width:25px; height:25px; border-radius:50%; display:grid; place-items:center; margin-top:.05rem;
+  background:rgba(124,202,190,.16); border:1px solid rgba(124,202,190,.5); color:var(--aqua); font-size:.78rem; font-weight:700; }
+.thanks-call{ margin-top:2rem; justify-content:center; }
+.thanks-call a{ font-size:1.15rem; }
+
+/* ---------- Ticks list (reusable) ---------- */
+.ticks{ list-style:none; padding:0; margin:1.4rem 0 0; display:grid; gap:.7rem; }
+.ticks li{ display:flex; gap:.7rem; align-items:flex-start; color:var(--cloud); font-size:.98rem; }
+.ticks .check{ margin-top:2px; }
+
+/* ---------- Two-column media section ---------- */
+.media-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,60px); align-items:center; }
+.frame{ padding:14px; border-radius:var(--r-l); }
+.frame img{ border-radius:calc(var(--r-l) - 12px); width:100%; height:auto; }
+.frame .cap{ display:block; text-align:center; font-size:.78rem; color:var(--mist-dim); margin-top:.7rem; letter-spacing:.04em; }
+
+/* ---------- Before & After ---------- */
+.ba-gallery{ column-count:2; column-gap:1.2rem; margin-top:2rem; }
+.ba-item{ position:relative; margin:0 0 1.2rem; padding:8px; border-radius:var(--r); overflow:hidden; break-inside:avoid; -webkit-column-break-inside:avoid; display:inline-block; width:100%; }
+.ba-item img{ display:block; width:100%; height:auto; border-radius:var(--r-s); }
+.ba-tag{ position:absolute; top:18px; font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  padding:.3em .7em; border-radius:999px; background:rgba(8,13,22,.62); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  color:#fff; border:1px solid rgba(255,255,255,.22); z-index:2; }
+.ba-tag-before{ left:18px; }
+.ba-tag-after{ right:18px; }
+@media (max-width:880px){ .ba-gallery{ column-count:1; } }
+.disclaimer{ margin-top:1.6rem; font-size:.78rem; color:var(--mist-dim); line-height:1.6; max-width:80ch; }
+
+/* ---------- Section imagery + map ---------- */
+.dentist-photo{ display:block; width:100%; height:300px; object-fit:cover; object-position:center 20%; border-radius:var(--r-s); margin-bottom:1.3rem; }
+.section-banner{ display:block; width:100%; height:340px; object-fit:cover; border-radius:var(--r); margin-top:2rem; box-shadow:0 18px 50px rgba(0,0,0,.3); }
+.map-embed{ display:block; width:100%; height:240px; border:0; border-radius:var(--r-s); margin-top:1rem; background:var(--navy-800); }
+@media (max-width:880px){
+  .dentist-photo{ height:260px; }
+  .section-banner{ height:220px; margin-top:1.6rem; }
+}
+
+/* ---------- Video ---------- */
+.video-wrap{ position:relative; margin-top:2rem; padding:14px; border-radius:var(--r-l); }
+.video-shell{ position:relative; border-radius:calc(var(--r-l) - 12px); overflow:hidden; aspect-ratio:16/9; background:#000; }
+.video-shell video{ width:100%; height:100%; object-fit:cover; display:block; }
+.video-poster{ position:absolute; inset:0; background-size:cover; background-position:center; display:grid; place-items:center;
+  cursor:pointer; transition:opacity .4s; }
+.video-poster::before{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(8,13,22,.15),rgba(8,13,22,.55)); }
+.play-btn{ position:relative; width:84px; height:84px; border-radius:50%; border:1px solid rgba(255,255,255,.5);
+  background:rgba(255,255,255,.14); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); display:grid; place-items:center;
+  box-shadow:0 12px 40px rgba(0,0,0,.5); transition:transform .25s var(--ease); }
+.video-poster:hover .play-btn{ transform:scale(1.08); }
+.play-btn svg{ width:30px; height:30px; fill:#fff; margin-left:4px; }
+.is-playing .video-poster{ opacity:0; pointer-events:none; }
+
+/* ---------- Card grids (treatments / funding / journey) ---------- */
+.cards{ display:grid; gap:1.2rem; margin-top:2rem; }
+.cards.two{ grid-template-columns:1fr 1fr; }
+.cards.three{ grid-template-columns:repeat(3,1fr); }
+.card{ padding:1.6rem 1.5rem; border-radius:var(--r); }
+.card .num{ font-family:"Fraunces",serif; font-size:1.05rem; color:var(--aqua); }
+.card h3{ font-size:1.45rem; color:#fff; margin:.3rem 0 .6rem; }
+.card p{ color:var(--mist); font-size:.95rem; margin:0; }
+.card .ticks{ margin-top:1.1rem; }
+.card .ticks li{ font-size:.9rem; }
+.badge{ position:absolute; top:1.2rem; right:1.2rem; font-size:.66rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding:.34em .75em; border-radius:999px; color:var(--ink); background:linear-gradient(180deg,var(--aqua),var(--steel-lite)); }
+.note-chip{ margin-top:1.6rem; padding:1.2rem 1.4rem; border-radius:var(--r-s); display:flex; gap:1rem; align-items:flex-start; }
+.note-chip .ico{ flex:0 0 auto; width:40px; height:40px; border-radius:11px; display:grid; place-items:center;
+  background:rgba(124,202,190,.16); border:1px solid rgba(124,202,190,.4); color:var(--aqua); }
+.note-chip b{ color:#fff; display:block; margin-bottom:.2rem; }
+.note-chip p{ color:var(--mist); font-size:.9rem; margin:0; }
+
+/* ---------- Steps (journey) ---------- */
+.steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.1rem; margin-top:2rem; counter-reset:step; }
+.step{ padding:1.5rem 1.3rem; border-radius:var(--r); position:relative; }
+.step .sn{ width:40px; height:40px; border-radius:12px; display:grid; place-items:center; font-family:"Fraunces",serif; font-size:1.15rem;
+  color:#fff; background:linear-gradient(180deg,var(--steel-lite),var(--steel-deep)); box-shadow:inset 0 1px 0 rgba(255,255,255,.35); margin-bottom:.9rem; }
+.step h3{ font-size:1.15rem; color:#fff; margin-bottom:.4rem; }
+.step p{ color:var(--mist); font-size:.88rem; margin:0; }
+
+/* ---------- Dentist ---------- */
+.dentist-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(28px,4vw,56px); align-items:center; }
+.dentist-card{ padding:1.8rem; border-radius:var(--r-l); }
+.dentist-card .role{ color:var(--aqua); font-size:.92rem; font-weight:600; margin:.2rem 0 1.2rem; }
+.dentist-card .creds{ list-style:none; padding:0; margin:1.4rem 0 0; display:flex; flex-wrap:wrap; gap:.6rem; }
+.dentist-card .creds li{ font-size:.82rem; color:var(--cloud); padding:.5em .9em; border-radius:999px;
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); }
+.mini-trust{ display:grid; gap:1.1rem; }
+.mini-trust .mt{ display:flex; gap:.9rem; align-items:flex-start; }
+.mini-trust .mt .ico{ flex:0 0 auto; width:38px; height:38px; border-radius:11px; display:grid; place-items:center; color:var(--aqua);
+  background:rgba(124,202,190,.14); border:1px solid rgba(124,202,190,.4); }
+.mini-trust b{ color:#fff; display:block; font-size:1rem; }
+.mini-trust p{ color:var(--mist); font-size:.88rem; margin:.15rem 0 0; }
+
+/* ---------- FAQ ---------- */
+.faq{ margin-top:2rem; display:grid; gap:.8rem; max-width:880px; }
+.faq-item{ border-radius:var(--r-s); overflow:hidden; }
+.faq-q{ width:100%; text-align:left; background:transparent; border:0; color:#fff; padding:1.15rem 1.3rem;
+  font-size:1.05rem; font-weight:600; font-family:"Fraunces",serif; display:flex; justify-content:space-between; gap:1rem; align-items:center; }
+.faq-q .pm{ flex:0 0 auto; width:26px; height:26px; border-radius:50%; border:1px solid var(--glass-edge); display:grid; place-items:center;
+  color:var(--aqua); transition:transform .3s var(--ease); font-size:1.1rem; }
+.faq-item.open .faq-q .pm{ transform:rotate(45deg); }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .35s var(--ease); }
+.faq-a p{ padding:0 1.3rem 1.2rem; margin:0; color:var(--mist); font-size:.94rem; }
+
+/* ---------- Book panel ---------- */
+#book .panel-inner{ display:grid; grid-template-columns:1fr; gap:clamp(28px,4vw,56px); }
+.book-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(28px,4vw,56px); align-items:center; }
+.book-points{ list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:.9rem; }
+.book-points li{ display:flex; gap:.75rem; align-items:center; color:var(--cloud); font-size:1.02rem; }
+.book-call{ margin-top:1.8rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+.book-call a{ font-family:"Fraunces",serif; font-size:1.6rem; color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:.5rem; }
+.book-call a svg{ width:1.1em; height:1.1em; color:var(--aqua); }
+.book-cta-wrap{ display:none; } /* desktop final CTA (mobile uses the form panel) */
+
+/* ---------- Footer ---------- */
+.footer{ padding:clamp(40px,6vh,72px) clamp(20px,5vw,48px) 3rem; border-top:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(180deg, transparent, rgba(8,13,22,.6)); }
+.footer-inner{ max-width:var(--maxw); margin:0 auto; }
+.footer-top{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem; align-items:flex-start; }
+.footer-brand b{ font-family:"Fraunces",serif; font-size:1.3rem; color:#fff; display:block; }
+.footer-brand span{ color:var(--mist-dim); font-size:.85rem; letter-spacing:.04em; }
+.footer-contact{ color:var(--mist); font-size:.95rem; }
+.footer-contact a{ color:#fff; text-decoration:none; font-weight:600; }
+.legal{ margin-top:2.4rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,.07); }
+.legal p{ font-size:.76rem; color:var(--mist-dim); line-height:1.65; margin:0 0 .8rem; max-width:100ch; }
+.legal .reg{ color:var(--mist); }
+.copy{ margin-top:1.6rem; font-size:.78rem; color:var(--mist-dim); }
+.copy a{ color:var(--mist); }
+
+/* ---------- Desktop side nav (vertical progress) ---------- */
+.sidenav{ position:fixed; right:22px; top:50%; transform:translateY(-50%); z-index:40; display:flex; flex-direction:column; gap:.7rem; }
+.sidenav button{ width:11px; height:11px; padding:0; border-radius:50%; border:1px solid rgba(255,255,255,.35); background:transparent; transition:.25s var(--ease); position:relative; }
+.sidenav button:hover{ background:rgba(255,255,255,.4); }
+.sidenav button.active{ background:var(--aqua); border-color:var(--aqua); box-shadow:0 0 0 5px rgba(124,202,190,.18); }
+.sidenav button .lbl{ position:absolute; right:22px; top:50%; transform:translateY(-50%); white-space:nowrap; font-size:.72rem;
+  padding:.35em .7em; border-radius:8px; background:rgba(8,13,22,.85); color:#fff; opacity:0; pointer-events:none; transition:.2s; border:1px solid rgba(255,255,255,.12); }
+.sidenav button:hover .lbl{ opacity:1; }
+
+/* ---------- Mobile dock (hidden on desktop) ---------- */
+.dock{ display:none; }
+
+/* ============================ MOBILE ============================ */
+@media (max-width:880px){
+  body{ height:100svh; overflow:hidden; }
+  .hint-desktop{ display:none; } .hint-mobile{ display:inline; }
+  .sidenav{ display:none; }
+
+  .deck{ height:100svh; display:flex; flex-direction:row; flex-wrap:nowrap;
+    overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; }
+  .deck::-webkit-scrollbar{ display:none; }
+
+  .panel{ flex:0 0 100vw; width:100vw; height:100svh; min-height:0; overflow-y:auto; overscroll-behavior:contain;
+    scroll-snap-align:start; scroll-snap-stop:always; align-items:flex-start;
+    padding:calc(var(--bar-h) + 18px) 22px calc(var(--dock-h) + 18px); -webkit-overflow-scrolling:touch; }
+  .deck::-webkit-scrollbar, .panel::-webkit-scrollbar{ display:none; }
+  .panel-inner{ min-height:min-content; }
+
+  /* stack all multi-column layouts */
+  #hero .panel-inner, .media-grid, .dentist-grid, .book-grid{ grid-template-columns:1fr; gap:1.8rem; }
+  .cards.two, .cards.three, .ba-grid, .steps{ grid-template-columns:1fr; }
+  .steps{ gap:.9rem; }
+
+  .hero-copy h1{ font-size:clamp(2.5rem,11vw,3.4rem); }
+  h2.title{ font-size:clamp(1.85rem,8vw,2.6rem); }
+  .hero-cta{ flex-direction:column; }
+  .hero-cta .btn{ width:100%; }
+
+  /* On mobile the form lives only in the Book panel */
+  .hero-form-wrap{ display:none; }
+  .book-form-wrap{ display:block; }
+  .book-cta-wrap{ display:none; }
+
+  /* reveal disabled (panels animate in via active state instead) */
+  .reveal{ opacity:1 !important; transform:none !important; }
+
+  .footer{ display:none; } /* legal shown inside the Book panel on mobile */
+  .legal-mobile{ display:block; }
+
+  /* Bottom dock */
+  .dock{ display:flex; position:fixed; left:0; right:0; bottom:0; height:var(--dock-h); z-index:55;
+    align-items:center; justify-content:space-between; gap:.8rem; padding:0 16px calc(env(safe-area-inset-bottom));
+    background:linear-gradient(0deg, rgba(8,13,22,.85), rgba(8,13,22,.4));
+    -webkit-backdrop-filter:blur(18px) saturate(140%); backdrop-filter:blur(18px) saturate(140%);
+    border-top:1px solid rgba(255,255,255,.1); }
+  .dock-arrow{ width:46px; height:46px; flex:0 0 auto; border-radius:50%; border:1px solid var(--glass-edge);
+    background:var(--glass); color:#fff; display:grid; place-items:center; transition:.2s; }
+  .dock-arrow:disabled{ opacity:.3; }
+  .dock-arrow svg{ width:18px; height:18px; }
+  .dock-center{ flex:1 1 auto; text-align:center; min-width:0; }
+  .dock-label{ font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--aqua); font-weight:600; }
+  .dock-dots{ display:flex; justify-content:center; gap:6px; margin-top:7px; }
+  .dock-dots button{ width:7px; height:7px; padding:0; border-radius:50%; border:0; background:rgba(255,255,255,.28); transition:.2s; }
+  .dock-dots button.active{ background:var(--aqua); width:20px; border-radius:4px; }
+}
+@media (min-width:881px){ .legal-mobile{ display:none; } }
+
+/* tablet tweak */
+@media (max-width:1080px) and (min-width:881px){
+  .cards.three, .ba-grid, .steps{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* ---------- Reveal animation (desktop) ---------- */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.in{ opacity:1; transform:none; }
+.reveal.d1{ transition-delay:.08s; } .reveal.d2{ transition-delay:.16s; }
+.reveal.d3{ transition-delay:.24s; } .reveal.d4{ transition-delay:.32s; }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  .orb{ animation:none; }
+  .reveal{ opacity:1; transform:none; transition:none; }
+  .scroll-hint .dot{ animation:none; }
+}
+</style>
+</head>
+
+<body>
+<!-- ambient background -->
+<div class="bg" aria-hidden="true">
+  <span class="orb a"></span><span class="orb b"></span><span class="orb c"></span>
+</div>
+
+<!-- persistent top bar -->
+<header class="topbar">
+  <a class="brand" href="#hero">
+    <b>Implant 360</b>
+    <span>Dental Implants · Western Sydney</span>
+  </a>
+  <button class="btn btn-primary js-book" type="button">Book Free Consult</button>
+</header>
+
+<main class="deck" id="deck">
+
+  <!-- ================= 1. HERO ================= -->
+  <section class="panel" id="hero">
+    <div class="hero-video-wrap" aria-hidden="true">
+      <img class="hero-video" src="reception.webp" alt="" aria-hidden="true">
+    </div>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="panel-inner">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Western Sydney · Free Consultation</p>
+        <h1 class="reveal d1">New Teeth Now,
+          <span class="pop"><em>Pay Your Way</em></span></h1>
+        <p class="hero-sub reveal d2">Replace missing teeth with natural-looking dental implants — with <b>flexible payment plans and early release of super available</b> for eligible patients.<sup>*</sup></p>
+
+        <div class="pay-chip glass reveal d2">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </span>
+          <div>
+            <b>Payment plans + early release of super available</b>
+            <p>Spread the cost of your treatment, or use your super to get started sooner — for eligible patients.</p>
+          </div>
+        </div>
+
+        <ul class="trust reveal d3">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>15+ years' implant experience</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Advanced digital planning</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Interest-free plans available</li>
+        </ul>
+
+        <div class="hero-cta reveal d3">
+          <button class="btn btn-primary btn-lg js-book" type="button">Book my free consultation</button>
+        </div>
+
+        <p class="scroll-hint reveal d4"><span class="dot"></span>
+          <span class="hint-desktop">Scroll to explore</span>
+          <span class="hint-mobile">Swipe to explore your options →</span>
+        </p>
+      </div>
+
+      <!-- DESKTOP form mount (hidden on mobile) -->
+      <div class="hero-form-wrap reveal d2">
+        <div class="glass form-card" id="heroFormMount"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. WHY IMPLANTS ================= -->
+  <section class="panel" id="why">
+    <div class="panel-inner media-grid">
+      <div>
+        <p class="eyebrow reveal">Say goodbye to missing teeth</p>
+        <h2 class="title reveal d1">A permanent solution, tailored to you</h2>
+        <p class="lede reveal d2">If you're tired of hiding your smile, struggling with uncomfortable dentures, or missing out on the foods you love, dental implants can help. An implant replaces the root of the tooth and bonds with your jawbone, creating a stable foundation for a fixed, natural-looking replacement that restores function, appearance and long-term oral health.</p>
+        <ul class="ticks reveal d3">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Fixed in place, so you can eat and speak with confidence</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Natural-looking replacement teeth</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Helps preserve jawbone and facial structure</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>A long-term alternative to loose dentures</li>
+        </ul>
+      </div>
+      <div class="glass frame reveal d2">
+        <img src="treatment-room.webp" alt="Modern dental treatment suite where Implant 360 sees patients in Western Sydney." loading="lazy">
+        <span class="cap">Advanced digital planning in our modern Western Sydney practice.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. BEFORE & AFTER ================= -->
+  <section class="panel" id="before">
+    <div class="panel-inner">
+      <p class="eyebrow reveal">Patient results</p>
+      <h2 class="title reveal d1">See the difference implants can make</h2>
+      <p class="lede reveal d2">Real patient transformations. Seeing outcomes from other patients can help you understand what may be possible with treatment.</p>
+
+      <div class="ba-gallery reveal d2">
+        <figure class="ba-item glass"><img src="before-after-1.webp" width="786" height="690" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+        <figure class="ba-item glass"><img src="before-after-2.webp" width="502" height="529" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+        <figure class="ba-item glass"><img src="before-after-3.webp" width="429" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+        <figure class="ba-item glass"><img src="before-after-4.webp" width="431" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+        <figure class="ba-item glass"><img src="before-after-5.webp" width="431" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+        <figure class="ba-item glass"><img src="before-after-6.webp" width="429" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+      </div>
+
+      <p class="disclaimer reveal">These images show real patient results. Individual results may vary, and outcomes and timeframes differ for each person. No treatment is performed at your consultation.<br><br>Treatment provided by Dr Ramesh Harichandran (AHPRA registration: <span style="opacity:.85">[add registration number]</span>).</p>
+
+      <div class="hero-cta reveal" style="margin-top:1.6rem">
+        <button class="btn btn-primary btn-lg js-book" type="button">Start your transformation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. TREATMENTS ================= -->
+  <section class="panel" id="treatments">
+    <div class="panel-inner">
+      <p class="eyebrow reveal">Implant options</p>
+      <h2 class="title reveal d1">Dental implant solutions we offer</h2>
+      <p class="lede reveal d2">Each option is a long-term solution for missing teeth, selected based on your oral health, the number of teeth being replaced, and your goals.</p>
+
+      <div class="cards two reveal d2">
+        <div class="glass card">
+          <span class="badge">Most common</span>
+          <h3>Single tooth implants</h3>
+          <p>Replace one missing tooth with a fixed, natural-looking implant — without relying on or affecting the healthy teeth either side.</p>
+          <ul class="ticks">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Permanent, fixed replacement</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Preserves the surrounding teeth</li>
+          </ul>
+        </div>
+        <div class="glass card">
+          <h3>Multiple implants</h3>
+          <p>Strategically placed implants to replace several missing teeth — more stable and longer-lasting than a removable denture.</p>
+          <ul class="ticks">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Replaces several gaps at once</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>No impact on healthy teeth</li>
+          </ul>
+        </div>
+        <div class="glass card">
+          <span class="badge">Full arch</span>
+          <h3>All-on-4 full arch</h3>
+          <p>A full set of fixed teeth supported by just four implants — ideal when most or all teeth in an arch are missing.</p>
+          <ul class="ticks">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>A whole arch on four implants</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Fixed — not a removable denture</li>
+          </ul>
+        </div>
+        <div class="glass card">
+          <h3>Implant-supported dentures</h3>
+          <p>Anchor your denture to implants for far less movement — no more slipping, clicking or messy adhesives.</p>
+          <ul class="ticks">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Greater stability than a standard denture</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>A more secure long-term solution</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass note-chip reveal d3">
+        <span class="ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0 1 12 5.5 5.4 5.4 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>
+        </span>
+        <div>
+          <b>A comfortable, supported experience</b>
+          <p>From your first consultation through to your final result, our team guides you every step of the way — with advanced digital planning for precise, predictable, clearly-explained treatment.</p>
+        </div>
+      </div>
+
+      <img class="section-banner reveal d3" src="exterior.webp" loading="lazy" alt="Western Sydney Smiles in St Marys — where Implant 360 sees patients">
+    </div>
+  </section>
+
+  <!-- ================= 5. FUNDING ================= -->
+  <section class="panel" id="funding">
+    <div class="panel-inner">
+      <p class="eyebrow reveal">Investment</p>
+      <h2 class="title reveal d1">Transparent, flexible payment options</h2>
+      <p class="lede reveal d2">The cost of dental implants varies with your individual needs and treatment complexity. Every option is discussed clearly before you make any decisions.</p>
+
+      <div class="cards three reveal d2">
+        <div class="glass card">
+          <h3>Flexible payment plans</h3>
+          <p>Spread the cost of your treatment into manageable repayments to suit your circumstances and budget — rather than paying it all at once.</p>
+        </div>
+        <div class="glass card">
+          <span class="badge">Popular</span>
+          <h3>Early release of super</h3>
+          <p>Eligible patients may be able to access their superannuation early to help fund treatment. We can guide you through how it works.</p>
+        </div>
+        <div class="glass card">
+          <h3>Interest-free options</h3>
+          <p>Interest-free payment plans are available subject to approval. Ask our team about eligibility at your free consultation.</p>
+        </div>
+      </div>
+
+      <div class="hero-cta reveal d3" style="margin-top:1.8rem">
+        <button class="btn btn-primary btn-lg js-book" type="button">See which option suits you</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. YOUR DENTIST ================= -->
+  <section class="panel" id="dentist">
+    <div class="panel-inner dentist-grid">
+      <div class="glass dentist-card reveal">
+        <img class="dentist-photo" src="dr-ramesh.webp" width="683" height="1000" loading="lazy" alt="Dr Ramesh Harichandran, Principal Implant Dentist at Implant 360">
+        <p class="eyebrow">Meet your dentist</p>
+        <h2 class="title" style="font-size:clamp(1.9rem,4vw,2.6rem)">Dr Ramesh Harichandran</h2>
+        <p class="role">Principal Implant Dentist · Implant 360</p>
+        <p style="color:var(--mist); font-size:.96rem; margin:0;">Dr Ramesh has practised at some of the most respected dental clinics across Sydney's North Shore and in rural NSW. He holds a degree in Advanced Science from the University of New South Wales and completed his Dentistry degree with Honours at the University of Sydney — where he was awarded the IADR Research Prize (Asia Pacific). He went on to complete a Postgraduate Diploma in Oral Implants at the University of Sydney and the implant rehabilitation program at Tufts University in Boston, USA. He also teaches and mentors other dentists in advanced implant techniques, bringing global expertise back to his patients in Western Sydney.</p>
+        <ul class="creds">
+          <li>Postgraduate Diploma in Oral Implants (USyd)</li>
+          <li>Implant Rehabilitation — Tufts University, Boston</li>
+          <li>15+ years · global educator &amp; mentor</li>
+        </ul>
+      </div>
+      <div class="mini-trust reveal d2">
+        <p class="eyebrow">Choosing well matters</p>
+        <h2 class="title" style="font-size:clamp(1.6rem,3.4vw,2.2rem); margin-bottom:1.4rem;">What to look for in an implant dentist</h2>
+        <div class="mt">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 2 6 2s6-1 6-2v-5"/></svg></span>
+          <div><b>Focused training</b><p>Implant dentistry should be a core focus, supported by formal postgraduate study — not just a weekend course.</p></div>
+        </div>
+        <div class="mt">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <div><b>Real experience</b><p>A dentist who has treated many cases has seen a wide range of situations, helping your plan account for the detail that matters.</p></div>
+        </div>
+        <div class="mt">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17.8 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></span>
+          <div><b>Modern technology</b><p>Advanced digital planning and quality, research-backed implant components — and we're happy to tell you exactly which.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. JOURNEY ================= -->
+  <section class="panel" id="journey">
+    <div class="panel-inner">
+      <p class="eyebrow reveal">Step by step</p>
+      <h2 class="title reveal d1">A seamless journey to your new smile</h2>
+      <div class="steps reveal d2">
+        <div class="glass step"><div class="sn">1</div><h3>Consultation &amp; assessment</h3><p>We assess your oral health and suitability, and discuss your goals and any concerns.</p></div>
+        <div class="glass step"><div class="sn">2</div><h3>Digital planning</h3><p>Advanced digital planning supports precise implant placement and a well-planned treatment.</p></div>
+        <div class="glass step"><div class="sn">3</div><h3>Implant placement</h3><p>The titanium implant is placed into the jawbone using carefully planned, precision-guided techniques.</p></div>
+        <div class="glass step"><div class="sn">4</div><h3>Healing phase</h3><p>Time for the implant to integrate with the bone. Timeframes vary with individual healing.</p></div>
+        <div class="glass step"><div class="sn">5</div><h3>Final restoration</h3><p>Your tooth replacement is completed with a custom crown or prosthesis matched to your natural teeth.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. FAQ ================= -->
+  <section class="panel" id="faq">
+    <div class="panel-inner">
+      <p class="eyebrow reveal">Good to know</p>
+      <h2 class="title reveal d1">Common questions</h2>
+      <div class="faq reveal d2" id="faqList">
+        <div class="glass faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Am I a candidate for dental implants?<span class="pm" aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Many people with missing or damaged teeth are suitable, including those finding dentures uncomfortable. Suitability depends on your oral health, bone structure and individual circumstances, so a consultation is required to determine whether implant treatment is appropriate for you.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Are dental implants painful?<span class="pm" aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Most patients experience minimal discomfort. Your dentist will talk you through exactly what to expect at each stage of your treatment, so you feel informed and at ease throughout.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">How much do dental implants cost?<span class="pm" aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>The investment depends on how many teeth are being replaced and the treatment that suits you, confirmed at your consultation. We offer flexible payment plans, interest-free options (subject to approval), and can guide eligible patients on early release of super — with all fees discussed clearly before anything begins.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">Can I use my super to pay for treatment?<span class="pm" aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Eligible patients may be able to access their superannuation early to help fund dental treatment. Eligibility is decided by the relevant authorities, not the practice, so we recommend seeking independent advice. We're happy to explain how the process generally works.</p></div>
+        </div>
+        <div class="glass faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">How long does treatment take?<span class="pm" aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Timeframes vary depending on healing requirements and the complexity of your individual case. Your personalised plan will set out what to expect from start to finish.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. BOOK ================= -->
+  <section class="panel" id="book">
+    <div class="panel-inner">
+      <div class="book-grid">
+        <div>
+          <p class="eyebrow reveal">Ready when you are</p>
+          <h2 class="title reveal d1">Take the first step toward your new smile</h2>
+          <ul class="book-points reveal d2">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Free, no-obligation consultation</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Clear plan with payment &amp; super options</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span>Experienced, caring implant team</li>
+          </ul>
+          <!-- desktop final CTA (form sits in the hero on desktop) -->
+          <div class="book-cta-wrap reveal d3" style="margin-top:1.6rem">
+            <button class="btn btn-primary btn-lg js-book" type="button">Book my free consultation</button>
+            <p style="color:var(--mist-dim); font-size:.82rem; margin-top:.8rem;">It only takes a minute, and there is no obligation.</p>
+          </div>
+        </div>
+
+        <!-- form (mobile shows here; desktop shows the hero copy of the form) -->
+        <div class="book-form-wrap reveal d2">
+          <div class="glass form-card" id="bookFormMount"></div>
+        </div>
+      </div>
+
+      <!-- AHPRA legal — shown inside this panel on mobile (footer is hidden there) -->
+      <div class="legal-mobile" style="margin-top:2.6rem; border-top:1px solid rgba(255,255,255,.08); padding-top:1.8rem;">
+        <div style="margin-bottom:1.8rem;">
+          <p style="font-size:.85rem; color:var(--cloud); font-weight:600; margin:0 0 .3rem;">Visit us — St Marys NSW 2760</p>
+          <iframe class="map-embed" title="Map to Western Sydney Smiles, St Marys" src="https://www.google.com/maps?q=Western%20Sydney%20Smiles%20St%20Marys&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p style="font-size:.72rem; color:var(--mist-dim); line-height:1.6;">For suitable patients only. Treatment timeframes vary depending on your individual clinical needs. Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner. Dental implant treatment requires a consultation to determine suitability, and individual results vary. Early release of superannuation is subject to eligibility criteria set by the relevant authorities and is not guaranteed; we recommend seeking independent financial advice. Payment plans are subject to provider terms and approval.</p>
+        <p style="font-size:.72rem; color:var(--mist); margin-top:.8rem;">Dr Ramesh Harichandran — Dental Practitioner. AHPRA registration: <span style="opacity:.8">[add registration number]</span>.</p>
+        <p style="font-size:.72rem; color:var(--mist-dim); margin-top:1rem;">© Implant 360. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THANK YOU (revealed after the form is submitted) ================= -->
+  <section class="panel" id="thanks" aria-live="polite">
+    <div class="panel-inner">
+      <div class="glass thanks-card reveal">
+        <div class="thanks-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <p class="eyebrow" style="justify-content:center">Request received</p>
+        <h2 id="thanksHeading" tabindex="-1">Thank you</h2>
+        <p class="lede" id="thanksMessage">We've received your details and our team will be in touch shortly to arrange your free consultation.</p>
+        <ol class="next-steps">
+          <li><span class="num">1</span><span>Our team will give you a call to find a time that suits and answer any questions you have.</span></li>
+          <li><span class="num">2</span><span>At your free consultation we'll assess your suitability and explain your options clearly.</span></li>
+          <li><span class="num">3</span><span>You'll get a clear treatment plan — including payment plan and early-release-of-super options if you'd like them.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (desktop) ================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logo.webp" alt="Implant 360" style="height:54px;width:auto;display:block;margin-bottom:1rem;background:#fbfdfb;padding:10px 14px;border-radius:14px;">
+        <b>Implant 360</b>
+        <span>Dental Implants · Western Sydney</span>
+      </div>
+      <div class="footer-contact" style="max-width:320px;">
+        Western Sydney Smiles · St Marys NSW 2760
+        <iframe class="map-embed" title="Map to Western Sydney Smiles, St Marys" src="https://www.google.com/maps?q=Western%20Sydney%20Smiles%20St%20Marys&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button class="btn btn-ghost js-book" type="button" style="margin-top:1rem;">Book a free consultation →</button>
+      </div>
+    </div>
+    <div class="legal">
+      <p>For suitable patients only. Treatment timeframes vary depending on your individual clinical needs.</p>
+      <p>Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner. Dental implant treatment requires a consultation to determine suitability, and individual results vary.</p>
+      <p>Early release of superannuation is subject to eligibility criteria set by the relevant authorities and is not guaranteed. We recommend seeking independent financial advice. Payment plans are subject to provider terms and approval.</p>
+      <p class="reg">Dr Ramesh Harichandran — Dental Practitioner. AHPRA registration: <span style="opacity:.8">[add registration number]</span>.</p>
+      <p class="copy">© Implant 360, All rights reserved · Website Design by <a href="https://generateyouraudience.com/" target="_blank" rel="noopener">Generate Your Audience</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= Desktop side progress nav ================= -->
+<nav class="sidenav" id="sidenav" aria-label="Section navigation"></nav>
+
+<!-- ================= Mobile dock ================= -->
+<div class="dock" id="dock">
+  <button class="dock-arrow" id="prevBtn" type="button" aria-label="Previous section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="dock-center">
+    <div class="dock-label" id="dockLabel">Welcome</div>
+    <div class="dock-dots" id="dockDots"></div>
+  </div>
+  <button class="dock-arrow" id="nextBtn" type="button" aria-label="Next section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<noscript>
+  <div style="position:fixed;inset:0;display:grid;place-items:center;background:var(--navy-900);z-index:999;padding:2rem;text-align:center;color:#fff">
+    <div>
+      <h2 style="font-family:'Fraunces',serif">Book your free consultation</h2>
+      <p style="color:var(--mist)">Please enable JavaScript in your browser to book your free consultation online.</p>
+    </div>
+  </div>
+</noscript>
+
+<script>
+/* =========================================================================
+   CONFIG — edit these to connect the form and add your real photos
+   ========================================================================= */
+const CONFIG = {
+  // Where to send leads. Set to "/api/lead" — the included serverless relay
+  // (api/lead.js) lives on the SAME Vercel project/domain as this page, so a
+  // same-origin path is all that's needed (no CORS to configure). That relay
+  // emails your SmileOx CRM intake address over SMTP/TLS, because a browser
+  // cannot send SMTP email directly.
+  // NOTE: submitting only works once deployed on Vercel. Opening this file
+  // straight off your computer will show an error on submit — that's expected.
+  FORM_ENDPOINT: "/api/lead"
+};
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const mqMobile = window.matchMedia("(max-width: 880px)");
+const isMobile = () => mqMobile.matches;
+
+/* ---------- Build the lead form ---------- */
+function buildForm(mount, prefix){
+  mount.innerHTML =
+    '<form class="lead-form" novalidate>'
+    + '<div class="form-head"><h3 class="form-title">Book your free consultation</h3>'
+    + '<p class="form-sub">Enter your details and we\'ll call you back to arrange it — no obligation.</p></div>'
+    + '<div class="form-body">'
+    + '<div class="field-row">'
+    +   '<label class="field" data-field="firstName"><span class="field-label">First name <span class="req">*</span></span>'
+    +   '<input type="text" name="firstName" autocomplete="given-name" placeholder="First name" required>'
+    +   '<span class="err-msg">Please enter your first name.</span></label>'
+    +   '<label class="field" data-field="lastName"><span class="field-label">Last name <span class="req">*</span></span>'
+    +   '<input type="text" name="lastName" autocomplete="family-name" placeholder="Last name" required>'
+    +   '<span class="err-msg">Please enter your last name.</span></label>'
+    + '</div>'
+    + '<label class="field" data-field="email"><span class="field-label">Email <span class="req">*</span></span>'
+    + '<input type="email" name="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>'
+    + '<span class="err-msg">Please enter a valid email address.</span></label>'
+    + '<label class="field" data-field="phone"><span class="field-label">Phone <span class="req">*</span></span>'
+    + '<input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="04xx xxx xxx" required>'
+    + '<span class="err-msg">Please enter a valid phone number.</span></label>'
+    + '<fieldset class="q" data-q="paymentPreference"><legend>How are you looking to pay?</legend><div class="opts">'
+    +   '<button type="button" class="opt" data-value="Payment plan">Payment plan</button>'
+    +   '<button type="button" class="opt" data-value="Early release of super">Early release of super</button>'
+    +   '<button type="button" class="opt" data-value="Health fund or savings">Health fund / savings</button>'
+    +   '<button type="button" class="opt" data-value="Not sure yet">Not sure yet</button>'
+    + '</div></fieldset>'
+    + '<fieldset class="q" data-q="toothSituation"><legend>What are you looking to replace?</legend><div class="opts">'
+    +   '<button type="button" class="opt" data-value="A single missing tooth">A single tooth</button>'
+    +   '<button type="button" class="opt" data-value="Multiple missing teeth">Multiple teeth</button>'
+    +   '<button type="button" class="opt" data-value="All or most teeth (full arch)">All / most teeth</button>'
+    +   '<button type="button" class="opt" data-value="Not sure">Not sure</button>'
+    + '</div></fieldset>'
+    + '<label class="field" data-field="postcode"><span class="field-label">Postcode</span>'
+    + '<input type="text" name="postcode" inputmode="numeric" autocomplete="postal-code" placeholder="e.g. 2760" maxlength="4">'
+    + '<span class="err-msg">Please enter a valid 4-digit postcode.</span></label>'
+    + '<input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">'
+    + '<button type="submit" class="btn btn-primary btn-block btn-lg submit-btn">Request my free consultation</button>'
+    + '<p class="form-foot">No obligation. Your details are kept private and used only to arrange your consultation.</p>'
+    + '</div>'
+    + '<div class="form-success" hidden><div class="sx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></div>'
+    + '<h3>Thank you</h3><p class="sx-msg"></p></div>'
+    + '</form>';
+
+  wireForm(mount.querySelector("form"));
+}
+
+function wireForm(form){
+  form.querySelectorAll("input").forEach(i=>{
+    i.addEventListener("input", ()=> i.closest(".field") && i.closest(".field").classList.remove("err"));
+  });
+  // option chips — single-select per question
+  form.querySelectorAll("fieldset.q").forEach(fs=>{
+    fs.querySelectorAll(".opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        fs.querySelectorAll(".opt").forEach(b=> b.classList.remove("is-selected"));
+        btn.classList.add("is-selected");
+        fs.classList.remove("err");
+      });
+    });
+  });
+
+  form.addEventListener("submit", e=>{
+    e.preventDefault();
+    // honeypot — silently drop bots
+    if(form.querySelector(".hp").value){ return; }
+
+    let ok = true;
+    const grab = key => { const f=form.querySelector('[data-field="'+key+'"]'); return { f, v:f.querySelector("input").value.trim() }; };
+    const fail = f => { f.classList.add("err"); ok=false; };
+
+    const first = grab("firstName"); if(first.v.length < 1) fail(first.f);
+    const last  = grab("lastName");  if(last.v.length  < 1) fail(last.f);
+    const email = grab("email");     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.v)) fail(email.f);
+    const phone = grab("phone");     if(!/^[\d\s()+\-]{8,}$/.test(phone.v)) fail(phone.f);
+    const postcode = grab("postcode"); if(postcode.v && !/^\d{4}$/.test(postcode.v)) fail(postcode.f);
+
+    if(!ok){
+      const firstErr = form.querySelector(".field.err");
+      if(firstErr) firstErr.scrollIntoView({behavior: reduceMotion?"auto":"smooth", block:"center"});
+      return;
+    }
+
+    // Payload uses the field names the SmileOx CRM intake expects.
+    const chip = q => { const fs=form.querySelector('fieldset.q[data-q="'+q+'"]'); const s=fs&&fs.querySelector(".opt.is-selected"); return s?s.dataset.value:""; };
+    const data = { firstName:first.v, lastName:last.v, email:email.v, phoneNumber:phone.v,
+      paymentPreference: chip("paymentPreference"), toothSituation: chip("toothSituation"), postcode: postcode.v };
+
+    const submitBtn = form.querySelector(".submit-btn");
+    submitBtn.disabled = true; submitBtn.textContent = "Sending…";
+
+    const finish = ()=>{
+      // collapse this form to a short confirmation…
+      form.querySelector(".form-body").style.display = "none";
+      const succ = form.querySelector(".form-success");
+      succ.hidden = false;
+      succ.querySelector(".sx-msg").textContent =
+        "Thanks " + data.firstName + " — we'll be in touch shortly to arrange your free consultation.";
+      // …and move the visitor on to the dedicated thank-you section.
+      leadSuccess(data);
+    };
+
+    if(CONFIG.FORM_ENDPOINT){
+      fetch(CONFIG.FORM_ENDPOINT, {
+        method:"POST", headers:{ "Content-Type":"application/json", "Accept":"application/json" },
+        body: JSON.stringify(data)
+      }).then(r=>{ if(!r.ok) throw new Error("Bad response"); return r; })
+        .then(finish)
+        .catch(()=>{ submitBtn.disabled=false; submitBtn.textContent="Request my free consultation";
+          alert("Sorry, something went wrong sending your details. Please try again in a moment."); });
+    } else {
+      setTimeout(finish, 450); // demo mode (no endpoint set yet)
+    }
+  });
+}
+
+buildForm(document.getElementById("heroFormMount"), "h");
+buildForm(document.getElementById("bookFormMount"), "b");
+
+/* ---------- FAQ accordion ---------- */
+document.querySelectorAll(".faq-item").forEach(item=>{
+  const btn = item.querySelector(".faq-q");
+  const a = item.querySelector(".faq-a");
+  btn.addEventListener("click", ()=>{
+    const open = item.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open);
+    a.style.maxHeight = open ? a.scrollHeight + "px" : 0;
+  });
+});
+
+/* ---------- Navigation (dots / dock / side nav) ---------- */
+const deck = document.getElementById("deck");
+const panels = Array.from(deck.querySelectorAll(".panel"));
+const chapters = [
+  {id:"hero",label:"Welcome"},{id:"why",label:"Why implants"},{id:"before",label:"Results"},
+  {id:"treatments",label:"Options"},{id:"funding",label:"Payment"},
+  {id:"dentist",label:"Your dentist"},{id:"journey",label:"Your journey"},{id:"faq",label:"Questions"},
+  {id:"book",label:"Book now"}
+];
+const bookIndex = chapters.findIndex(c=>c.id==="book");
+let current = 0;
+
+const sidenav = document.getElementById("sidenav");
+const dockDots = document.getElementById("dockDots");
+const dockLabel = document.getElementById("dockLabel");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+chapters.forEach((c,i)=>{
+  const s = document.createElement("button");
+  s.type="button"; s.setAttribute("aria-label","Go to "+c.label);
+  s.innerHTML = '<span class="lbl">'+c.label+'</span>';
+  s.addEventListener("click", ()=>goTo(i));
+  sidenav.appendChild(s);
+
+  const d = document.createElement("button");
+  d.type="button"; d.setAttribute("aria-label","Go to "+c.label);
+  d.addEventListener("click", ()=>goTo(i));
+  dockDots.appendChild(d);
+});
+const sideBtns = Array.from(sidenav.children);
+const dotBtns = Array.from(dockDots.children);
+
+function setActive(i){
+  if(i<0 || i>=chapters.length || i===current) return;
+  current = i;
+  sideBtns.forEach((b,k)=>b.classList.toggle("active", k===i));
+  dotBtns.forEach((b,k)=>b.classList.toggle("active", k===i));
+  dockLabel.textContent = chapters[i].label;
+  prevBtn.disabled = i===0;
+  nextBtn.disabled = i===chapters.length-1;
+}
+
+function goTo(i, focusForm){
+  i = Math.max(0, Math.min(chapters.length-1, i));
+  const beh = reduceMotion ? "auto" : "smooth";
+  if(isMobile()){
+    deck.scrollTo({ left: i*deck.clientWidth, behavior: beh });
+  } else {
+    document.getElementById(chapters[i].id).scrollIntoView({ behavior: beh, block:"start" });
+  }
+  setActive(i);
+  if(focusForm){
+    setTimeout(()=>{
+      const wrap = isMobile() ? document.querySelector(".book-form-wrap") : document.querySelector(".hero-form-wrap");
+      const first = wrap && wrap.querySelector("input:not(.hp)");
+      if(first) first.focus({preventScroll:true});
+    }, reduceMotion?0:600);
+  }
+}
+
+/* "Book" buttons everywhere */
+function bookAction(){ goTo(isMobile() ? bookIndex : 0, true); }
+document.querySelectorAll(".js-book").forEach(b=> b.addEventListener("click", bookAction));
+
+/* Reveal + move to the thank-you section once a lead is captured */
+function leadSuccess(data){
+  const h = document.getElementById("thanksHeading");
+  const m = document.getElementById("thanksMessage");
+  if(h) h.textContent = "Thank you, " + data.firstName;
+  if(m) m.textContent = "We've received your details and our team will call you on "
+        + data.phoneNumber + " shortly to arrange your free, no-obligation consultation.";
+
+  document.body.classList.add("lead-submitted");      // un-hides #thanks
+  const thanksPanelIndex = panels.length - 1;          // #thanks is the last panel in the deck
+  const beh = reduceMotion ? "auto" : "smooth";
+
+  // wait a frame so the panel leaves display:none before we scroll to it
+  requestAnimationFrame(()=>{
+    if(isMobile()){
+      deck.scrollTo({ left: thanksPanelIndex * deck.clientWidth, behavior: beh });
+    } else {
+      document.getElementById("thanks").scrollIntoView({ behavior: beh, block:"start" });
+    }
+    const card = document.querySelector(".thanks-card");
+    if(card) card.classList.add("in");
+    if(h) h.focus({ preventScroll:true });
+  });
+}
+
+prevBtn.addEventListener("click", ()=>goTo(current-1));
+nextBtn.addEventListener("click", ()=>goTo(current+1));
+
+/* keyboard arrows on mobile */
+window.addEventListener("keydown", e=>{
+  if(!isMobile()) return;
+  const tag = (e.target.tagName||"").toLowerCase();
+  if(tag==="input"||tag==="textarea") return;
+  if(e.key==="ArrowRight"){ goTo(current+1); }
+  if(e.key==="ArrowLeft"){ goTo(current-1); }
+});
+
+/* track active section */
+let scrollT;
+deck.addEventListener("scroll", ()=>{
+  if(!isMobile()) return;
+  clearTimeout(scrollT);
+  scrollT = setTimeout(()=>{ setActive(Math.round(deck.scrollLeft / deck.clientWidth)); }, 60);
+}, {passive:true});
+
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      // reveal children
+      en.target.querySelectorAll(".reveal").forEach(r=>r.classList.add("in"));
+      if(!isMobile()){
+        const idx = chapters.findIndex(c=>c.id===en.target.id);
+        if(idx>-1) setActive(idx);
+      }
+    }
+  });
+}, { threshold: 0.35 });
+panels.forEach(p=>io.observe(p));
+
+/* initial reveal for hero + recalc on layout change */
+function refreshLayout(){
+  if(isMobile()){
+    document.querySelectorAll(".reveal").forEach(r=>r.classList.add("in"));
+    setActive(Math.round(deck.scrollLeft / deck.clientWidth) || 0);
+  } else {
+    panels[0].querySelectorAll(".reveal").forEach(r=>r.classList.add("in"));
+  }
+}
+mqMobile.addEventListener("change", ()=>{ deck.scrollTo({left:0}); window.scrollTo({top:0}); setTimeout(refreshLayout,50); });
+refreshLayout();
+
+</script>
+</body>
+</html>
