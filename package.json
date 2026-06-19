@@ -1,9 +1,5 @@
 {
   "name": "implant360-lead-relay",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "nodemailer": "^9.0.0"
-  }
+  "private": true
 }

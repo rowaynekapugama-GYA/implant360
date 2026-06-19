@@ -969,9 +969,10 @@ function wireForm(form){
           let info = null;
           try { info = await r.json(); } catch(e){}
           if(!r.ok || (info && info.ok === false)){
-            const reason = info && info.missing ? ("missing env vars: " + info.missing.join(", "))
+            let reason = info && info.missing ? ("missing env vars: " + info.missing.join(", "))
               : (info && (info.detail || info.error)) || ("HTTP " + r.status);
-            throw new Error(reason);
+            if(reason && typeof reason === "object") reason = JSON.stringify(reason);
+            throw new Error(String(reason));
           }
           return r;
         })
