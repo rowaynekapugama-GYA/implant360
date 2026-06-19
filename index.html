@@ -258,15 +258,15 @@ body.lead-submitted #thanks{ display:flex; }
 .frame .cap{ display:block; text-align:center; font-size:.78rem; color:var(--mist-dim); margin-top:.7rem; letter-spacing:.04em; }
 
 /* ---------- Before & After ---------- */
-.ba-gallery{ column-count:2; column-gap:1.2rem; margin-top:2rem; }
-.ba-item{ position:relative; margin:0 0 1.2rem; padding:8px; border-radius:var(--r); overflow:hidden; break-inside:avoid; -webkit-column-break-inside:avoid; display:block; }
+.ba-gallery{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; margin-top:2rem; align-items:start; }
+.ba-item{ position:relative; margin:0; padding:8px; border-radius:var(--r); overflow:hidden; }
 .ba-item img{ display:block; width:100%; height:auto; border-radius:var(--r-s); }
 .ba-tag{ position:absolute; top:18px; font-size:.62rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
   padding:.3em .7em; border-radius:999px; background:rgba(8,13,22,.62); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
   color:#fff; border:1px solid rgba(255,255,255,.22); z-index:2; }
 .ba-tag-before{ left:18px; }
 .ba-tag-after{ right:18px; }
-@media (max-width:880px){ .ba-gallery{ column-count:1; } }
+@media (max-width:880px){ .ba-gallery{ grid-template-columns:1fr; } }
 .disclaimer{ margin-top:1.6rem; font-size:.78rem; color:var(--mist-dim); line-height:1.6; max-width:80ch; }
 
 /* ---------- Section imagery + map ---------- */
@@ -534,8 +534,8 @@ body.lead-submitted #thanks{ display:flex; }
         </ul>
       </div>
       <div class="glass frame reveal d2">
-        <img src="treatment-room.webp" alt="Modern dental treatment suite where Implant 360 sees patients in Western Sydney." loading="lazy">
-        <span class="cap">Advanced digital planning in our modern Western Sydney practice.</span>
+        <img src="before-after-1.webp" alt="Before and after dental implant treatment — a real Implant 360 patient result." loading="lazy">
+        <span class="cap">A real patient result. Individual results may vary.</span>
       </div>
     </div>
   </section>
@@ -548,12 +548,11 @@ body.lead-submitted #thanks{ display:flex; }
       <p class="lede reveal d2">Real patient transformations. Seeing outcomes from other patients can help you understand what may be possible with treatment.</p>
 
       <div class="ba-gallery reveal d2">
-        <figure class="ba-item glass"><img src="before-after-1.webp" width="786" height="690" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
-        <figure class="ba-item glass"><img src="before-after-2.webp" width="502" height="529" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
         <figure class="ba-item glass"><img src="before-after-3.webp" width="429" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
         <figure class="ba-item glass"><img src="before-after-4.webp" width="431" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
         <figure class="ba-item glass"><img src="before-after-5.webp" width="431" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
         <figure class="ba-item glass"><img src="before-after-6.webp" width="429" height="554" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
+        <figure class="ba-item glass"><img src="before-after-2.webp" width="502" height="529" loading="lazy" alt="Before and after dental implant treatment — Implant 360 patient"></figure>
       </div>
 
       <p class="disclaimer reveal">These images show real patient results. Individual results may vary, and outcomes and timeframes differ for each person. No treatment is performed at your consultation.<br><br>Treatment provided by Dr Ramesh Harichandran (AHPRA registration: <span style="opacity:.85">[add registration number]</span>).</p>
